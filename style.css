@@ -1,0 +1,26 @@
+body
+{
+    font-family: sans-serif;
+}
+
+.niks
+{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url(http://bla.hosts.ma-cloud.nl/wp-content/uploads/2015/02/grijzeSter.png);
+}
+
+.niks:hover
+{
+    background-image: url(SterRolOver.png);
+    cursor: pointer;
+}
+
+.niks span
+{
+    display: inline-block;
+    width: 0;
+    height: 32px;
+     background-image: url(http://bla.hosts.ma-cloud.nl/wp-content/uploads/2015/02/geleSter.png);
+}
