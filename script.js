@@ -1,41 +1,41 @@
-var aantalKliks = Math.ceil(Math.random());
-var uitvoerAantal = document.getElementById('count');
-var totaalScore = aantalKliks*Math.random();
-var uitvoerWaadering = document.getElementById('rating');
-var deSterren = document.querySelectorAll('.niks')
+var amountK = Math.ceil(Math.random());
+var theClicks = document.getElementById('count');
+var totalScore = amountK*Math.random();
+var theRating = document.getElementById('rating');
+var stars = document.querySelectorAll('.niks');
 
 
-function kleurSter(sterNummer, procent) {
-    var naam = 'ster' + sterNummer;
+function colorStar(starNumber, procent) {
+    var naam = 'ster' + starNumber;
     procent = Math.min(procent, 100);
     document.getElementById(naam).style.width = procent + '%';
 }
 
-//kleurSter(1, 50);
 
-function kleurDeSterren(waardering){
+
+function colorTheStar(rating){
     for(var i=1; i < 6; i++){
-        kleurSter(i, waardering*100);
-        waardering --;
+        colorStar(i, rating*100);
+        rating --;
     }
 }
 
 
 //
-function uitvoeren(){
-    uitvoerAantal.innerHTML = aantalKliks;
-    uitvoerWaadering.innerHTML = Math.ceil(10*totaalScore/aantalKliks)/10;
-    kleurDeSterren(Math.ceil(10*totaalScore/aantalKliks)/10);
+function exports(){
+    theClicks.innerHTML = amountK;
+    theRating.innerHTML = Math.ceil(10*totalScore/amountK)/10;
+    colorTheStar(Math.ceil(10*totalScore/amountK)/10);
 }
 
-uitvoeren();
+exports();
 
-function verwerkKlik(){
-    aantalKliks ++;
-    var nummertje = this.getAttribute('data-role');
-    totaalScore += parseInt(nummertje);
-    uitvoeren();
+function process(){
+    amountK ++;
+    var number = this.getAttribute('data-role');
+    totalScore += parseInt(number);
+    exports();
 }
-for(var i = 0; i<deSterren.length; i++){
-    deSterren[i].addEventListener('click', verwerkKlik);
+for(var i = 0; i<stars.length; i++){
+    stars[i].addEventListener('click', process);
 }
