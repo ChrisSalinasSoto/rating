@@ -1,6 +1,18 @@
 body
 {
     font-family: sans-serif;
+    margin:auto;
+    text-align: center;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 10px;
+    
+}
+
+#container
+{
+    border: 2px solid black;
+    border-radius: 10px;
 }
 
 .niks
@@ -23,4 +35,10 @@ body
     width: 0;
     height: 32px;
      background-image: url(http://bla.hosts.ma-cloud.nl/wp-content/uploads/2015/02/geleSter.png);
+}
+
+span
+{
+    margin-right: 19px;
+    margin-left: -1.9px;
 }
